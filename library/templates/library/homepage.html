@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Library</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'library/style.css' %}" />
+</head>
+<body>
+	<div>
+		<div class="header">
+			<h1 class="title">
+				Books Store
+			</h1>
+				<form action="{% url 'book' %}" method="POST">
+					{% csrf_token %}
+					<div class="search_div">
+						<div class="search">
+							<input type="text" placeholder="Search..." id="search" name="search">
+						</div>
+						<div class="button_search">
+							<input type="submit" name="search_submit">
+						</div>
+					</div>
+				</form>
+		</div>
+		<div class="content">
+			<div class="books_list">
+				{% for book in latest_book_list %}
+					<div class="book {{forloop.counter}}">
+						<div class="image">
+							<img src="{{book.image}}">
+						</div>
+						<div>
+							<h2 class="book_name">
+								NAME : {{book.name}}
+							</h2>
+							<h5 class="book_author">
+								Author : {{book.author}}
+							</h5>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</div>
+</body>
+</html>

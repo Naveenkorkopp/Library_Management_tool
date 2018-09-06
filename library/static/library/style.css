@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    width: 100%;
+    background: brown;
+}
+h1.title {
+    padding: 10px;
+    font-size: 40px;
+    font-family: fantasy;
+    background: wheat;
+}
+.search {
+    padding: 50px;
+    width: 50%;
+}
+.search_div {
+    display: flex;
+    width: 200%;
+}
+input#search {
+    border: 1px solid;
+    width: 100%;
+    font-size: 35px;
+}
+.button_search {	
+    width: 30%;
+    margin-top: 50px;
+}
+input[type="submit"] {
+    font-size: 25px;
+    width: 41%;
+    border: 1px solid;
+    height: 44px;
+    border-radius: 22px;
+    cursor: pointer;
+}
+.books_list {
+    display: flex;
+    padding: 60px;
+    /* margin: 12px; */
+}
+.book {
+    margin: 30px;
+    padding: 35px;
+    background: brown;
+    color: white;
+}
